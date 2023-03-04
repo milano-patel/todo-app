@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --violet: 156, 39, 176;
+  --green: 67, 160, 71;
+  --blue: 30, 136, 229;
+  --offwhite: 230, 230, 230;
+  --theme-color: var(--violet);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.root-container {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(var(--theme-color));
+  color: rgb(var(--offwhite));
+  transition: all .5s ease-in;
+}
+
+h1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  margin: 0 auto;
+  opacity: .8;
+}
+
+h2 {
+  opacity: .8;
+}
+
+.container {
+  width: 400px;
+  height: 100vh;
+  margin-top: 150px;
+}
+
+.add-task {
+  display: flex;
+}
+
+.add-task input {
+  padding: 5px 5px;
+  margin-bottom: 20px;
+  width: 100%;
+  background-color: transparent;
+  color: rgb(var(--offwhite));
+  border: none;
+  border-bottom: 2px solid rgb(var(--offwhite));
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+.add-task input:focus {
+  outline: none;
+}
+
+
+.add-task span {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.task-list {
+  list-style: none;
+  margin-top: 5px;
+}
+
+.task-element {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(var(--offwhite));
+  padding: 10px 20px;
+  margin-bottom: 5px;
+  border: 2px solid rgb(var(--offwhite));
+  border-radius: 5px;
+}
+
+.task-element input,
+li {
+  width: 250px;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+.task-element:hover {
+  border: 2px dashed rgb(var(--offwhite));
+}
+
+.task-element input {
+  background-color: transparent;
+  color: rgb(var(--offwhite));
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  letter-spacing: 1px;
+}
+
+.task-element input:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: rgb(var(--offwhite));
+  opacity: .5;
+}
+
+.task-element .optBtn {
+  cursor: pointer;
+}
+
+.categories {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+}
+
+.category {
+  padding: 5px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.selected {
+  background-color: rgb(var(--offwhite));
+  color: rgb(var(--theme-color));
+}
+
+.theme-container {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.example-section {
+  width: 10rem;
+  background-color: rgba(50, 50, 50, 0.2);
+  backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 0.5rem;
+  padding: .8rem;
+}
+
+.example-section>input {
+  height: 1.4rem;
+  width: 1.4rem;
+  margin: 0px;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.example-section>input:before,
+.example-section>input:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  z-index: 2;
+}
+
+.example-section>input:after {
+  height: 104%;
+  width: 104%;
+}
+
+.example-section>input:before {
+  display: none;
+  height: 120%;
+  width: 120%;
+  border: 0.2rem solid white;
+}
+
+.example-section>input:checked:before {
+  display: block;
+}
+
+.example-section>input[value="green"]:after {
+  background-color: rgb(var(--green));
+}
+
+.example-section>input[value="blue"]:after {
+  background-color: rgb(var(--blue));
+}
+
+.example-section>input[value="violet"]:after {
+  background-color: rgb(var(--violet));
+}
