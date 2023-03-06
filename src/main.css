@@ -21,7 +21,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  overflow: scroll;
   width: 100vw;
   background-color: rgb(var(--theme-color));
   color: rgb(var(--offwhite));
